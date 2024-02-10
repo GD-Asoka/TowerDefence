@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class TowerParent : MonoBehaviour
 {
-    [SerializeField] protected GameObject turret, projectile;
-    [SerializeField] protected SpriteRenderer sr;
-    [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected Collider2D col;
-    protected Transform target;
+    public GameObject turret, projectile;
+    public SpriteRenderer sr;
+    public Rigidbody2D rb;
+    public Collider2D col;
+    public Transform target;
+    public SO_Enemy SOenemy;
+    public int level, health;
+    public float range;
+    public LayerMask towerLayer;
 
     private void Awake()
     {
@@ -21,16 +25,44 @@ public class TowerParent : MonoBehaviour
     private void Start()
     {
         projectile.SetActive(false);
+        projectile.GetComponent<Projectile>().projectileSpeed = SOenemy.projectileSpeed;
+    }
+
+    private void Update()
+    {
+        if (target)
+            turret.transform.forward = (target.position - transform.position).normalized;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
+        {
             target = collision.transform;
+            StartCoroutine(Shoot());
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        //StartCoroutine(Shoot());
+        target = null;
+    }
+
+    private IEnumerator Shoot()
+    {
+        while(target != null)
+        {
+            if (!projectile.activeInHierarchy)
+            {
+                projectile.SetActive(true);
+                projectile.GetComponent<Projectile>().target = target;
+            }
+            yield return null;
+        }        
+    }
+
+    protected void LevelUp()
+    {
+
     }
 }

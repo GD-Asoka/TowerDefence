@@ -140,6 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29c98ef20b428a40b56a5973ffac473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  projectileSpeed: 0
+  range: 0
+  damage: 1
 --- !u!1 &168875398
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8492083a0b7eb6741a8bffb206981136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 10
+  targetInSight: 0
+  range: 0
 --- !u!1 &713831767
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +383,7 @@ MonoBehaviour:
   grid: {fileID: 2015488695}
   moveSpeed: 0.5
   rotationSpeed: 0.5
+  health: 100
 --- !u!212 &713831769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -859,6 +867,14 @@ MonoBehaviour:
   sr: {fileID: 0}
   rb: {fileID: 0}
   col: {fileID: 0}
+  target: {fileID: 0}
+  SOenemy: {fileID: 0}
+  level: 0
+  health: 0
+  range: 0
+  towerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!58 &1518332334
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11853,6 +11869,14 @@ PrefabInstance:
     - target: {fileID: 4715331601221649717, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784017693562950643, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784017693562950643, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.004
       objectReference: {fileID: 0}
     - target: {fileID: 6587084805095699945, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
       propertyPath: m_IsActive
