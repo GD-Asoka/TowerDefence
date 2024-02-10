@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &89890423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6587084805095699945, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
+  m_PrefabInstance: {fileID: 8074047990093481772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &89890426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89890423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29c98ef20b428a40b56a5973ffac473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &168875398
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +239,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4.44
+  orthographic size: 1.16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -307,6 +324,23 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &551475915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8074047990017764371, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
+  m_PrefabInstance: {fileID: 8074047990093481772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &551475918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551475915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8492083a0b7eb6741a8bffb206981136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &713831767
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +566,7 @@ MonoBehaviour:
   m_Follow: {fileID: 713831770}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 4.44
+    OrthographicSize: 1.16
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -820,6 +854,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712266980aa24ff4e921dc5958228b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turret: {fileID: 0}
+  projectile: {fileID: 0}
+  sr: {fileID: 0}
+  rb: {fileID: 0}
+  col: {fileID: 0}
+--- !u!58 &1518332334
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518332328}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.078125
 --- !u!1 &1562225427
 GameObject:
   m_ObjectHideFlags: 3
@@ -11795,6 +11850,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4715331601221649717, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587084805095699945, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8074047989179838084, guid: f9f0bea2d8d7e284f84898f6bf963577, type: 3}
       propertyPath: m_Name
       value: Fire
