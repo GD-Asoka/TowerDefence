@@ -17,15 +17,15 @@ public class TowerParent : MonoBehaviour
     private void Awake()
     {
         turret = GetComponentInChildren<Turret>().gameObject;
-        projectile = GetComponentInChildren<Projectile>().gameObject;
+        projectile = turret.GetComponentInChildren<Projectile>().gameObject;
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
     }
 
     private void Start()
     {
-        projectile.SetActive(false);
-        projectile.GetComponent<Projectile>().projectileSpeed = SOenemy.projectileSpeed;
+        //projectile.GetComponent<Projectile>().projectileSpeed = SOenemy.projectileSpeed;
+        //projectile.SetActive(false);
     }
 
     private void Update()

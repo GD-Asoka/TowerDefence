@@ -13,13 +13,13 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
-        transform.parent = null;
+        //transform.parent = null;
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        targetPosition = target.position;
+        //targetPosition = target.position;
     }
 
     private void FixedUpdate()
